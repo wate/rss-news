@@ -1,0 +1,54 @@
+# feeds.txt のサンプル
+#
+# 書式
+#   - 1行に1URLを書きます。
+#   - URLの後ろに空白かタブを入れて、表示名を書けます(省略できます)。
+#   - 表示名は、news.mdの見出しになります。省略すると、フィード自身のタイトルが使われます。
+#   - #で始まる行は、コメントとして無視されます。
+#
+# 順序
+#   - 同じ記事が複数のフィードにある場合は、上に書いたフィードの記事が残ります。
+#   - 他のフィードの記事を含む総合フィードは、最後に書きます。
+
+# --- 言語・技術の一般ニュース ---
+
+# Publickey
+https://www.publickey1.jp/atom.xml
+
+# 技術評論社 gihyo.jp
+https://gihyo.jp/feed/atom
+
+# Node.js Blog
+https://nodejs.org/en/feed/blog.xml Node.js Blog
+
+# --- 言語・ランタイムのリリース情報 ---
+#   GitHubのリリースフィードは、リポジトリURLの末尾に/releases.atomを付けます。
+
+# PHP
+https://github.com/php/php-src/releases.atom PHP
+
+# Node.js
+https://github.com/nodejs/node/releases.atom Node.js
+
+# Python
+https://github.com/python/cpython/releases.atom Python
+
+# --- フレームワーク・ツールのリリース情報 ---
+
+# Laravel
+https://github.com/laravel/laravel/releases.atom Laravel
+
+# zx
+https://github.com/google/zx/releases.atom zx
+
+# --- 総合フィード ---
+
+# TechFeed(すべてカテゴリー)
+#   総合フィードのため、最後に書きます。
+https://techfeed.io/feeds/categories/all TechFeed
+
+# ITmediaのRSSフィード(追加候補)
+#   次のURLはRSSフィードの紹介ページです。URL自体はフィードではないため、コメントにしています。
+#   ITmedia NEWS、ITmedia PC USER、＠ITなどのRSSフィードがあります。
+#   取得する情報は、次の一覧から好みに合わせて選んで追加してください。
+#   https://corp.itmedia.co.jp/media/rss_list/

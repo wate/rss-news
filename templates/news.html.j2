@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>RSS新着</title>
+</head>
+<body>
+<h1>RSS新着</h1>
+<p>新着{{ newsCount }}件(取得: {{ fetchedAt }})</p>
+<p>前回までの新着は、{{ newsDir }}/ の複製を参照してください。</p>
+{% for feed in feeds %}
+<section>
+<h2>{{ feed.name }}</h2>
+<ul>
+{% for entry in feed.entries %}
+<li>
+{% if entry.isHttpUrl %}
+<a href="{{ entry.url }}">{{ entry.title }}</a>{{ entry.dateSuffix }}
+{% else %}
+{{ entry.title }}{{ entry.dateSuffix }}
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endfor %}
+{% if hasFailures %}
+<section>
+<h2>取得に失敗したフィード</h2>
+<ul>
+{% for failure in failures %}
+<li>{{ failure.url }}: {{ failure.reason }}</li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}
+</body>
+</html>

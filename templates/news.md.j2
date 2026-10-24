@@ -1,0 +1,23 @@
+新着{{ newsCount }}件(取得: {{ fetchedAt }})
+
+前回までの新着は、`{{ newsDir }}/`の複製を参照してください。
+{% for feed in feeds %}
+
+### {{ feed.name }}
+
+{% for entry in feed.entries %}
+{% if entry.hasUrl %}
+- [{{ entry.titleMarkdown }}]({{ entry.urlMarkdown }}){{ entry.dateSuffix }}
+{% else %}
+- {{ entry.titleMarkdown }}{{ entry.dateSuffix }}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% if hasFailures %}
+
+### 取得に失敗したフィード
+
+{% for failure in failures %}
+- {{ failure.url }}: {{ failure.reason }}
+{% endfor %}
+{% endif %}

@@ -1,0 +1,10 @@
+{
+  "name": "rss-news",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "fast-xml-parser": "^5.11.2",
+    "nunjucks": "^3.2.4"
+  }
+}

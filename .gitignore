@@ -1,0 +1,20 @@
+# 依存パッケージ
+node_modules/
+vendor/
+python-vendor/
+__pycache__/
+*.pyc
+
+# ロックファイル
+composer.lock
+package-lock.json
+
+# 実行時の生成物
+feeds.txt
+news.db
+news.md
+news/
+run.log
+
+# OS
+.DS_Store

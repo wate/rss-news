@@ -1,0 +1,13 @@
+{
+  "name": "wate/rss-news",
+  "description": "RSS新着収集スクリプト",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2",
+    "twig/twig": "^3.0"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
