@@ -13,7 +13,6 @@ RSS新着収集スクリプトのテスト
 - Node.js 24以上と`zx`
 - PHP 8.2以上
 - Python 3.11以上
-    - Python 3.9は2025-10-31にEOL済みのため、3.11以上を使います。
 - `curl`
 - 各版の依存パッケージ(`node_modules`、`vendor`、`python-vendor`)が導入済みであること
 
